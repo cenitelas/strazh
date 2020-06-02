@@ -1,0 +1,14 @@
+.cell{
+  background-color: black;
+  border: 1px solid white;
+}
+
+.cell_size2{
+  float: left;
+  width: calc(100% / 2 - 2px) !important;
+  height: calc(100% / 2 - 2px) !important;
+  & ~{
+    width: calc(100% / 5 - 2px) !important;
+    height: calc(100% / 5 - 2px) !important;
+  }
+}
