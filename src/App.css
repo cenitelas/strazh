@@ -1,5 +1,9 @@
-.App {
-  width: 100vw;
-  height: 100vh;
-  background-color: #2A2F32;
+.design{
+  top:0;
+  left: 0;
+  z-index: -1;
+  position: fixed;
+  margin-top: 0.9rem;
+  transform: scaleY(1.07);
+  opacity: 0.4;
 }

@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Screens from "./Containers/Screens/Screens";
+import Router from "./Router";
+import ScreenDesign from "./Assets/screens.png"
+import {Provider} from "react-redux";
+import {createStore, applyMiddleware} from "redux";
+import thunk from 'redux-thunk';
+import reducers from './reducers';
+import "./App.css"
+
+const store = createStore(reducers(),applyMiddleware(thunk));
 
 function App() {
   return (
-    <div className="App">
-        <Screens/>
-    </div>
+      <Provider store={store}>
+          <img className="design" src={ScreenDesign}/>
+          <Router/>
+      </Provider>
   );
 }
 

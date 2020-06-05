@@ -20,6 +20,7 @@ export default class Screens extends React.Component {
     })
 
     window.addEventListener('resize', () => {
+      let data = this.state.data;
       this.setState({
         containerWidth: ReactDOM.findDOMNode(this.refs.container).clientWidth,
         containerHeight: ReactDOM.findDOMNode(this.refs.container).clientHeight,

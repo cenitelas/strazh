@@ -6,13 +6,34 @@ const url = require('url')
 let mainWindow
 
 function createWindow() {
+    const {width, height} = require('electron').screen.getPrimaryDisplay().workAreaSize
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width:width,
+        height:height,
+        'always-on-top': true,
+        show: true,
+        kiosk: true,
+        movable:false,
+        'min-width': null,
+        'min-height': null,
+        frame: false,
+        minimizable:false,
+        // alwaysOnTop:true,
+        fullscreen:true,
+        'zoom-factor': 1,
+        thickFrame:false,
+        fullscreenable:true,
+        titleBarStyle: 'hidden',
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            java: false,
+            webgl: true,
+            plugins: true,
+            webaudio: true,
+            'web-security': false
         }
     })
+    mainWindow.setFullScreen(true)
     mainWindow.webContents.openDevTools()
     mainWindow.loadURL(
         process.env.ELECTRON_START_URL ||
@@ -29,6 +50,8 @@ function createWindow() {
 }
 
 app.on('ready', createWindow)
+
+app.on('ready-to-show', () => { mainWindow.setSimpleFullScreen(true); });
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
