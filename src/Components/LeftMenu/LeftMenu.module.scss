@@ -1,4 +1,5 @@
 .leftMenu{
+  position: relative;
   height: 100%;
   padding-bottom: 0.1rem;
   width: 21.73rem;
@@ -6,4 +7,33 @@
   background-color: #2A2F32;
   display: flex;
   justify-content: flex-start;
+  transition: all 0.5s ease;
+  .control{
+    cursor: pointer;
+    z-index: 2;
+    top: 22px;
+    position: absolute;
+    right: -21px;
+    width: 42px;
+    height: 42px;
+    background: url("../../Assets/icons/arrow-dark.svg") no-repeat center #2A2F32;
+    border: 0.05rem solid transparent;
+    transition: all 0.5s ease;
+    &:before{
+
+    }
+    &:hover{
+      background: url("../../Assets/icons/arrow-light.svg") no-repeat center #2A2F32;
+    }
+  }
+}
+
+.leftMenuClose{
+  margin-left: -21.73rem;
+
+  .control{
+    z-index: 200;
+    transform: rotateZ(180deg);
+    right: -42px;
+  }
 }

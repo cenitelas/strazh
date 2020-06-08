@@ -9,6 +9,7 @@ export const Cell = (props)=>{
     const url = "http://85.29.136.125:8080/b3a41c7fa34bb2ee9d03d83690ba8042/flv/sb3r0Aa/JvI7M8nieC8X/s.flv"
     return(
         <div ref={ref} className={`${style.cell}`}>
+            <button onClick={()=>props.onChange(props.id,true)}>asd</button>
             <Player config = {configPlayer}/>
         </div>
     )
