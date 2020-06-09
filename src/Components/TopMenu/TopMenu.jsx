@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./TopMenu.module.scss"
-import ButtonTopMenu from "../Buttons/ButtonTopMenu";
+import ButtonTopMenu from "../Buttons/ButtonTopMenu/ButtonTopMenu";
 
 export default class TopClass extends React.Component{
     constructor(props) {

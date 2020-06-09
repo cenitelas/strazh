@@ -7,10 +7,15 @@ import {
 import ScreensContainer from "../Screens/ScreensContainer";
 import Header from "../Header/Header";
 import LeftMenu from "../../Components/LeftMenu/LeftMenu";
+import {worlds} from "../../Utils/localization";
 
 export default class Main extends React.Component{
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        worlds.setLanguage('ru')
     }
 
     render() {

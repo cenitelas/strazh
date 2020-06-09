@@ -1,0 +1,33 @@
+.buttonCamControl{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem;
+    background: no-repeat center;
+    opacity: 0.6;
+    transition: all 0.5s ease;
+  }
+  .caption{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #EAEAEA;
+  }
+
+  &:hover{
+    background: #3C4347;
+    border-radius: 0.1rem;
+    .icon{
+      opacity: 1;
+    }
+  }
+}

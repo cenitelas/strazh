@@ -1,0 +1,24 @@
+.menuCamTree{
+  display: flex;
+  .button{
+    cursor: pointer;
+    width: 3.5rem;
+    height: 1.1rem;
+    background: url("../../Assets/icons/optionsDark.svg") no-repeat center;
+    transition: all 0.5s ease;
+    &:hover{
+      transition: all 0.5s ease;
+      background: url("../../Assets/icons/optionsLight.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+}
+
+.menu{
+  margin-top: -0.9rem !important;
+  width: 187px;
+  padding: 0.5rem 0;
+  background-color: #2A2F32 !important;
+  border-radius: 0.1rem;
+}
